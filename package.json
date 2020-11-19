@@ -1,9 +1,9 @@
 {
-  "name": "TTE.project1",
+  "name": "contra2.0",
   "license": "MIT",
   "description": "Component for RAMP",
   "version": "0.0.1",
-  "main": "src/init",
+  "main": "src/server.js",
   "engines": {
     "node": ">=10"
   },
