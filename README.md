@@ -1,7 +1,4 @@
-## Requirements for the Mid-Term Review: [here](docs/README.md) 
-<hr />
-
-# <TITLE>
+# CONTRA-2.0
 
 [![License: MIT](https://img.shields.io/github/license/ramp-eu/TTE.project1.svg)](https://opensource.org/licenses/MIT)
 [![Docker badge](https://img.shields.io/docker/pulls/ramp-eu/TTE.project1.svg)](https://hub.docker.com/r/<org>/<repo>/)
@@ -91,15 +88,10 @@ Information about the API of  the <Name of component> can be found in the [API d
 
 ## Testing
 
+For performing a tests you have to follow the step below. Tests are written in the [jest](https://jestjs.io) framework
 ```text
-How to test the component
-
-For performing a basic end-to-end test, you have to follow the step below. A detailed description about how to run tests can be found [here].
-
 > npm test
-
 ```
-
 ## License
 
 [MIT](LICENSE) © <TTE>
