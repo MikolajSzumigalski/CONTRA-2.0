@@ -53,6 +53,6 @@ ENV NODE_ENV=production
 RUN \
 	cd src/ &&\
 	npm install
-# Expose 8080
-EXPOSE 8080
+# Expose 5000
+EXPOSE 5000
 ENTRYPOINT ["docker/entrypoint.sh"]
