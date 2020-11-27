@@ -29,3 +29,11 @@ In body you must use this parameters:
 - - startPaletteProcessingTime
 - - totalCarrierLayers
 - - totalCarrierLayersCompleted
+
+### Connection with many Context Brokers
+
+If you would like to send data from KUKA robot to more than 1 Context Broker you must add in `config.js` file in config object another object with fields **host** and **port**. For example  
+`anotherBroker {  
+  host: 1.2.3.4,  
+  port: 1234  
+}`  
