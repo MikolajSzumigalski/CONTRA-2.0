@@ -20,7 +20,10 @@ The following functional components are used to provide IoT capabliites of leaga
 ​
 ​
 # RS232-IoT-Agent internal structure
-`[tutaj opisz w bulettach którko strukturę logiczną Twojej aplikacji]`
+- socket which connect app with RS232 app
+- translateData function, which allows to translate data from KUKA robot to format readable for Context Broker
+- update function which allows to send data from Iot Agent to Context Broker(s)
+- function allows create new entity in Context Broker
 ​
 # API and interfaces
 ​
