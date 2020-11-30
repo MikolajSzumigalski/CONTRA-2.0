@@ -3,7 +3,7 @@ In order to provide IoT capabliites of leagacy production or warehouse machines 
 ​
 The RS232-IoT-Agent component is a node.js based middleware software solution deployed in between a hardware gateway enbaling serial to ethernet comunnication conversion and other software components (e.g. legacy ERP or WMS systems). 
 ​
-The NGSIv2 (`link`) portocol supoort is provided as a outbound interface of the RS232-IoT-Agent. Therefore, by default RS232-IoT-Agent provides data to the Orion Context Broker (`link`) acting as a central message borker for other IT systems.
+The [NGSIv2](https://fiware.github.io/specifications/ngsiv2/stable/) portocol supoort is provided as a outbound interface of the RS232-IoT-Agent. Therefore, by default RS232-IoT-Agent provides data to the [Orion Context Broker](https://fiware-orion.readthedocs.io/en/master/) acting as a central message borker for other IT systems.
 ​
 # Architecture overview 
  The following picture shows the high-level architecture of the solution:
