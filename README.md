@@ -69,8 +69,6 @@ How to use the component
 
 Information about how to use the Contra 2.0 can be found in the [User & Programmers Manual](docs/usermanual.md).
 
-The following features are listed as [deprecated](docs/deprecated.md).
-
 ## Testing
 
 For performing a tests you have to follow the step below. Tests are written in the [jest](https://jestjs.io) framework
