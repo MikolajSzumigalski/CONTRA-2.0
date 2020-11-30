@@ -1,1 +1,31 @@
-architecture.md
+# Concept 
+In order to provide IoT capabliites of leagacy production or warehouse machines supporting only old-fashioned RS-232 serial communication the RS232-IoT-Agent component is provided. 
+​
+The RS232-IoT-Agent component is a node.js based middleware software solution deployed in between a hardware gateway enbaling serial to ethernet comunnication conversion and other software components (e.g. legacy ERP or WMS systems). 
+​
+The NGSIv2 (`link`) portocol supoort is provided as a outbound interface of the RS232-IoT-Agent. Therefore, by default RS232-IoT-Agent provides data to the Orion Context Broker (`link`) acting as a central message borker for other IT systems.
+​
+# Architecture overview 
+ The following picture shows the high-level architecture of the solution:
+ 
+ `[tutaj wstaw rysunek architektury z wiki]`  
+​
+# Functional components 
+The following functional components are used to provide IoT capabliites of leagacy production or warehouse machines:
+* production machine - provides data using serial communication 
+* hardware IoT gateway - converts RS232 serial data to ethernet data frames (e.g. USR W610 Serial to Ethernet converter)
+* RS232-IoT-Agent - software middleware between machine (hardware IoT gateway)
+* Orion Context Broker - NGSIv2 compatible message broker 
+* Machines data consumers (context consumers) - e.g. production or warehouse applications, ERP, WMS or MES systems 
+​
+​
+# RS232-IoT-Agent internal structure
+`[tutaj opisz w bulettach którko strukturę logiczną Twojej aplikacji]`
+​
+# API and interfaces
+​
+## Gettting data from a machine (from hardware gateway)
+The RS232-IoT-Agent supports HTTP, TCP/IP based communication for getting data from a hardware gateway (listening on specific TCP socket)
+​
+## Providing data to Orion Context Broker
+The RS232-IoT-Agent supports RESTful NGSIv2 API to create and update machines contextual data
