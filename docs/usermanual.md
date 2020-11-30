@@ -22,14 +22,14 @@ Additionally You can set UART Autoframe on Enable and set Autoframe Time for 500
 ​
 ## RS232-IoT-Agent configuration
 ​
-In order to use the RS232-IoT-Agent with legacy production machines using RS232 connection an administrator needs provide connection cofigiration within `config.js` file including both harwadware RS232-to-Eth gateway/converter:
+In order to use the RS232-IoT-Agent with legacy production machines using RS232 connection an administrator needs provide connection cofigiration within `config.js` file including both harwadware RS232-to-Eth gateway/converter:  
 ​
-> [tutaj podajesz listę niezbędnych paramterów do ustawienia dla połaczenia się z konwerterem]
+- in `config.js` file you must set **rs_host** and **rs_port** variables (default *10.10.100.254* and *8899*)
+
+and the Orion Context Broker:  
 ​
-and the Orion Context Broker:
-​
-> [tutaj podajesz listę niezbędnych paramterów do ustawienia dla OCB]
-​
+- in `config.js` file you must set **adress** and **port** of *contextBroker* object
+- in `iotagent.js` file you must change name KUKA in `/v2/entities/KUKA/attrs` to name of your entity​​
 ​
 ## Data model setup 
 RS232-IoT-Agent data model must be compatible with data model prodived by machine/robot program. Currently, the RS232-IoT-Agent is configured to support custom KUKA KR240 robot program providing:
@@ -48,15 +48,14 @@ In a request body you must use this parameters:
 ```
 id
 type
-attributes: (this is object with fields)
-carrierId
-carrierLayersProgress
-carrierTimeRemaining
-lastStateChange
-startPaletteProcessingTime
-totalCarrierLayers
-totalCarrierLayersCompleted
-Connection with many Context Brokers
+attributes: (this is object with fields:)
+- carrierId
+- carrierLayersProgress
+- carrierTimeRemaining
+- lastStateChange
+- startPaletteProcessingTime
+- totalCarrierLayers
+- totalCarrierLayersCompleted
 ```
 ​
 ## Multiple Orion Context Brokers support
