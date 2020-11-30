@@ -8,7 +8,7 @@ The NGSIv2 (`link`) portocol supoort is provided as a outbound interface of the 
 # Architecture overview 
  The following picture shows the high-level architecture of the solution:
  
- `[tutaj wstaw rysunek architektury z wiki]`  
+![](https://user-images.githubusercontent.com/17854328/100662415-26bba300-3355-11eb-8600-791a209ede59.png)
 ​
 # Functional components 
 The following functional components are used to provide IoT capabliites of leagacy production or warehouse machines:
