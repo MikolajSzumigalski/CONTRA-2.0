@@ -79,7 +79,6 @@ For performing a tests you have to follow the step below. Tests are written in t
 ```text
 > npm test
 ```
-
 ## License
 
 [MIT](LICENSE) © <TTE>
