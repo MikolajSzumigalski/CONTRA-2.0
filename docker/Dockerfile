@@ -1,16 +1,12 @@
-
-
-ARG NODE_VERSION=10.19.0-slim
+ARG NODE_VERSION=10.16.0
 FROM node:${NODE_VERSION}
-ARG GITHUB_ACCOUNT=jason-fox
-ARG GITHUB_REPOSITORY=TTE.project1
+ARG GITHUB_ACCOUNT=MikolajSzumigalski
+ARG GITHUB_REPOSITORY=CONTRA-2.0
 ARG DOWNLOAD=latest
-ARG SOURCE_BRANCH=master
-
+ARG SOURCE_BRANCH=preparereview
 ENV GITHUB_ACCOUNT=${GITHUB_ACCOUNT}
 ENV GITHUB_REPOSITORY=${GITHUB_REPOSITORY}
 ENV DOWNLOAD=${DOWNLOAD}
-
 RUN apt-get update && \
 	# Ensure that unzip, wget and curl are installed
 	apt-get install -y --no-install-recommends unzip ca-certificates curl wget && \
@@ -36,9 +32,8 @@ RUN apt-get update && \
 	apt-get remove -y unzip && \
 	apt-get -y autoremove && \
 	rm -rf /var/lib/apt/lists/* 
-
+RUN chown -R node:node /opt/component/*
 WORKDIR /opt/component
-
 RUN \
 	# Ensure that Git is installed prior to running npm install
 	apt-get update && \
@@ -53,11 +48,11 @@ RUN \
 	chmod +x docker/entrypoint.sh && \
 	apt-get clean && \
 	rm -rf /var/lib/apt/lists/*
-
 USER node
 ENV NODE_ENV=production
-
-# Expose 8080
-EXPOSE 8080
-
+RUN \
+	cd src/ &&\
+	npm install
+# Expose 5000
+EXPOSE 5000
 ENTRYPOINT ["docker/entrypoint.sh"]
